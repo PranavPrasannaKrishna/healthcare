@@ -93,8 +93,13 @@ app.get('/api/leads', (req, res) => {
   });
 });
 
-// Start express server
-app.listen(PORT, () => {
-  console.log(`HealthBridges server is running at http://localhost:${PORT}`);
-  console.log(`Leads will be saved locally to: ${LEADS_FILE}`);
-});
+// Export the app module for serverless hosts (like Vercel)
+module.exports = app;
+
+// Start express server only when run locally
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`HealthBridges server is running at http://localhost:${PORT}`);
+    console.log(`Leads will be saved locally to: ${LEADS_FILE}`);
+  });
+}
