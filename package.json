@@ -1,0 +1,12 @@
+{
+  "name": "healthbridges-landing-page",
+  "version": "1.0.0",
+  "description": "HealthBridges Caregiver OS Landing Page and Backend Lead Capture",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

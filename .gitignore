@@ -1,0 +1,12 @@
+# Node dependencies
+node_modules/
+
+# Local database file
+leads.json
+
+# Local lockfiles
+package-lock.json
+
+# System generated logs
+.system_generated/
+.gemini/
